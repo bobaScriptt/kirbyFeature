@@ -12,22 +12,14 @@ const app = new Application(canvas);
 // Push the model loading promise into the array
 modelPromises.push(app.load("https://prod.spline.design/Srv2mLsM7RXLVrSo/scene.splinecode"));
 
-//map these core IDs, and hide them until the loading state is done. Prevents web scrolling until rendering is complete.
-const elements = ['part1', 'part2', 'part3', 'part4', 'customFooter'].map(id => {
-  const element = document.getElementById(id);
-  element.style.display = 'none';
-  return element;
-});
+
 
 // Wait for all models to load
 Promise.all(modelPromises).then(() => {
   setTimeout(() => {
     // Hide the loading screen
     loadingScreen.style.display = "none";
-    // Enable scrolling on the elements
-    elements.forEach(element => {
-        element.style.display = '';
-    });
+
 
       const Group = app.findObjectByName("Kirby");
 
@@ -155,9 +147,3 @@ Promise.all(modelPromises).then(() => {
   }, 10000);
 });
 
-// Disable scrolling on the elements
-document.getElementById("part1").style.display = 'none';
-document.getElementById("part2").style.display = 'none';
-document.getElementById("part3").style.display = 'none';
-document.getElementById("part4").style.display = 'none';
-document.getElementById("customFooter").style.display = 'none';

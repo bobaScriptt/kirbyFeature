@@ -16,22 +16,12 @@ const starApp2 = new Application(starCanvas2);
 // Push the model loading promise into the array
 modelPromises.push(starApp2.load("https://prod.spline.design/rveDnJ6N6rlsRlGf/scene.splinecode"));
 
-//map these core IDs, and hide them until the loading state is done. Prevents web scrolling until rendering is complete.
-const elements = ['part1', 'part2', 'part3', 'part4', 'customFooter'].map(id => {
-  const element = document.getElementById(id);
-  element.style.display = 'none';
-  return element;
-});
-
 // Wait for all models to load
 Promise.all(modelPromises).then(() => {
     setTimeout(() => {
     // Hide the loading screen
     loadingScreen.style.display = "none";
-    // show elements
-    elements.forEach(element => {
-      element.style.display = '';
-    });
+
 
     const Group = starApp2.findObjectByName("star");
 
@@ -68,10 +58,3 @@ Promise.all(modelPromises).then(() => {
 
 
 
-
-// Disable scrolling on the elements
-document.getElementById("part1").style.display = 'none';
-document.getElementById("part2").style.display = 'none';
-document.getElementById("part3").style.display = 'none';
-document.getElementById("part4").style.display = 'none';
-document.getElementById("customFooter").style.display = 'none';
