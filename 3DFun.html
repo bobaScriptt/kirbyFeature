@@ -1,0 +1,193 @@
+<!-- DISCLAIMER: ALL KIRBY COPY RIGHTS PROPERTY OF NINTENDO. THIS IS PURELY MADE FOR A FUN SCHOOL PROJECT. -->
+<!-- PLEASE ALLOW THE WEBSITE A MINUTE TO LOAD ALL THE 3D MODELS BEFORE INTERACTING. -->
+<!-- PLEASE ALLOW THE WEBSITE A MINUTE TO LOAD ALL THE 3D MODELS BEFORE INTERACTING. -->
+<!-- PLEASE ALLOW THE WEBSITE A MINUTE TO LOAD ALL THE 3D MODELS BEFORE INTERACTING. -->
+<!-- PLEASE ALLOW THE WEBSITE A MINUTE TO LOAD ALL THE 3D MODELS BEFORE INTERACTING. -->
+<!-- PLEASE ALLOW THE WEBSITE A MINUTE TO LOAD ALL THE 3D MODELS BEFORE INTERACTING. -->
+
+
+<html lang="en">
+   <head>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="/styles/stylesFor3D.css" />
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Kirby Feature</title> <!-- Made by GRAY/BobaScript. Kirby Copyrights property of Nintendo. This was just a fun school project. Nothing commercial!!-->
+   </head>
+   <body>
+      <div class="container-fluid" id="part1">
+         <nav class="myNavBar">
+            <a class="" href="index.html">Home</a>
+         </nav>
+         <canvas id="kirbyTextCanvas"></canvas>
+         <div class="canvas-cont">
+            <canvas id="kirbyModeCanvas"></canvas>
+         </div>
+         <div class="part1EmptyAligner"></div>
+         <div id="part1WelcomeH1Parent">
+            <h1 id="welcomeH1"></h1>
+         </div>
+         <div class="part1EmptyAligner"></div>
+      </div>
+      <div class="container-fluid" id="part2">
+         <div class="canvas-contBubbles">
+            <canvas id="bubblesCanvas"></canvas>
+         </div>
+         <div class="row" id="part2Row1">
+            <div class="col-md-6" id="part2Row1ColLeft">
+            </div>
+            <div class="col-md-6" id="part2Row1ColRight">
+               <h1>Join Kirby on an unforgettable journey</h1>
+               <p>Float off on an all-new adventure as the powerful puffball, Kirby. Explore 3D stages as you discover a mysterious world, save the kidnapped Waddle Dees, and defeat the ferocious Beast Pack. Hope you’re hungry for an unforgettable adventure!</p>
+            </div>
+         </div>
+         <div class="row" id="part2Row2">
+            <div class="col-md-6" id="part2Row2ColLeft">
+               <img src="/images/purpleStart.png" id="part2Row2ColLeftPurpleStar">
+            </div>
+            <div class="col-md-6" id="part2Row2ColRight">
+               <div class="part2ColRightKirbyVideo">
+                  <img src="/images/yellowPlayBtn.png" id="part2ColRightKirbyVideoPlayBtn">
+                  <video width="720" height="720" autoplay muted loop id="kirbyVideoSource">
+                     <source src="/images/kirbyLoop.mp4" type="video/mp4">
+                  </video>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="container-fluid" id="part3">
+         <div class="row" id="part3Row1">
+            <div class="col-md-6" id="part3Row1ColLeft">
+               <h1>Unleash powerful abilities</h1>
+               <p>Copy enemies' abilities like Sword and Ice, as well as the new copy abilities Drill and Ranger, and use them to attack and explore your surroundings!</p>
+            </div>
+         </div>
+         <div class="col-md-6" id="part3Row1ColRight">
+         </div>
+         <div class="row" id="part3Row2">
+            <div class="col-md-6" id="part3Row2ColLeft">
+               <div class="part3ColLeftKirbyVideo">
+                  <img src="/images/yellowPlayBtn.png" id="part3ColLeftKirbyVideoPlayBtn">
+                  <video autoplay muted loop id="kirbyVideoSource2">
+                     <source src="/images/kurbyPowersLoop.mp4" type="video/mp4">
+                  </video>
+               </div>
+            </div>
+            <div class="col-md-6" id="part3Row2ColRight">
+               <canvas id="starCanvas"></canvas>
+            </div>
+         </div>
+         <div class="row" id="part3Row3">
+            <div class="col-md-6" id="part3Row3ColLeft">
+               <div id="part3Row3ColLeftCustomContainer">
+                  <input type="image" src="/images/yellowArrow.png" alt="Previous" onclick="prevImage()" id="part3Row3ColLeftCustomContainerPrevBtn">
+                  <img src="/images/sleepKirby.png" alt="Image 1" id="sleepKirby">
+                  <img src="/images/rangerKirby.png" alt="Image 2" id="rangerKirby">
+                  <img src="/images/fireKirby.png" alt="Image 3" id="fireKirby">
+                  <input type="image" src="/images/yellowArrow.png" alt="Next" onclick="nextImage()"  id="part3Row3ColLeftCustomContainerNextBtn">
+               </div>
+               <div id="part3Row3ColLeftCustomContainerInfoKirbyName">
+                  <h1 id="kirbyName"></h1>
+               </div>
+               <div id="part3Row3ColLeftCustomContainerInfo">
+                  <p id="kirbyDescription"></p>
+               </div>
+            </div>
+            <div class="col-md-6" id="part3Row3ColRight">
+               <canvas id="starCanvas2"></canvas>
+            </div>
+         </div>
+      </div>
+      <div class="container-fluid" id="part4">
+         <div class="row" id="part4Row1">
+            <div class="col-sm-6" id="part4Row1ColLeft">
+               <h1>Evolved Copy Abilities</h1>
+               <p>All 12 Copy Abilities can evolve into more powerful versions—here are a few examples!</p>
+            </div>
+            <div class="col-sm-6" id="part4Row1ColRight">
+               <h1>And meet the stars of the show!</h1>
+               <p>Meet the friends—and the foes—of this epic tale!</p>
+            </div>
+         </div>
+         <div class="row" id="part4Row2">
+            <div class="col-md-6" id="part4Row2ColLeft">
+               <div class="part4ColLeftKirbyVideo">
+                  <video autoplay muted loop id="kirbyVideoSource3">
+                     <source src="/images/kirbyElementsLoop.mp4" type="video/mp4">
+                  </video>
+               </div>
+            </div>
+            <div class="col-md-6" id="part4Row2ColRight">
+               <div id="featureParent" class="container">
+                  <div class="row">
+                     <div id="kirbyStar" class="col-md-4">
+                        <h1>Kirby</h1>
+                        <p>A pink and powerful puffball, Kirby can inhale certain enemies and copy their abilities to unleash on others.</p>
+                        <img src="/images/kirbyStillImage.png" alt="Image 1" id="kirbyStill" class="img-fluid">
+                     </div>
+                     <div id="elfilinStar" class="col-md-4">
+                        <h1>Elfilin</h1>
+                        <p>After being rescued by Kirby, this mysterious flying creature teams up with our hero to rescue the Waddle Dees.</p>
+                        <img src="/images/elfilinStill.png" alt="Image 2" id="elfilinStill" class="img-fluid">
+                     </div>
+                     <div id="bandanaStar" class="col-md-4">
+                        <h1>Bandana Waddle Dee</h1>
+                        <p>Kirby’s battling buddy who joins the action in 2-player co-op play.</p>
+                        <img src="/images/bandanaStill.png" alt="Image 3" id="bandanaStill" class="img-fluid">
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="container-fluid" id="customFooter">
+        <div class="canvas-Fireworks">
+          <canvas id="fireworksCanvas"></canvas>
+        </div>
+         <div class="row" id="customFooterText">
+            <div class="col-sm">
+               GRAY/BobaScriptt
+            </div>
+            <div class="col-sm">
+               Kirby Project
+            </div>
+            <div class="col-sm">
+               All properties of Kirby are copyright of Nintendo. This was just a fun project.
+            </div>
+         </div>
+      </div>
+</html>
+<!-- Sweet Alerts -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
+<!-- Splittype -->
+<script src="https://unpkg.com/split-type"></script>
+<!--GSAP-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Flip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Observer.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Draggable.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/MotionPathPlugin.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/EaselPlugin.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/PixiPlugin.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js"></script>
+<!-- RoughEase, ExpoScaleEase and SlowMo are all included in the EasePack file -->    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/EasePack.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/CustomEase.min.js"></script>
+<!--Bootstrap-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/7a790d5aa6.js" crossorigin="anonymous"></script>
+<!-- Personal Scripts -->
+<script type="module" src="/scripts/modules/3DTextHeader.js"></script>
+<script type="module" src="/scripts/modules/3DKirby.js"></script>
+<script type="module" src="/scripts/modules/3DStarAndNintendo.js"></script>
+<script src="/scripts/animateElements.js"></script>
+<script src="/scripts/kirbyTypes.js"></script>
+<script src="/scripts/playButtons.js"></script>
+</body>
